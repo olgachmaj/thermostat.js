@@ -13,7 +13,7 @@ $(document).ready(function() {
     updateTemperature()
   })
 
-  $('#reset').click(function() {
+  $('#temperature-reset').click(function() {
     thermostat.reset()
     updateTemperature()
 
