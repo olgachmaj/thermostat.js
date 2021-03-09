@@ -19,14 +19,14 @@ class Thermostat {
   }
 
   currentEnergyUse() {
-    if( this.temperature < 18 ) {
-      return 'Low energy use'
+    if( this.temperature <= 18 ) {
+      return 'low-usage'
     }
     else if( this.temperature <= 25 && this.temperature > 18 ){
-      return 'Medium energy use'
+      return 'medium-usage'
     }
     else {
-      return 'High energy use'
+      return 'high-usage'
     }
   }
 

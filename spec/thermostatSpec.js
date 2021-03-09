@@ -72,12 +72,12 @@ describe('Thermostat', function() {
         thermostat.down()
         thermostat.down()
 
-        expect(thermostat.currentEnergyUse()).toEqual('Low energy use')
+        expect(thermostat.currentEnergyUse()).toEqual('low-usage')
       });
 
       it("returns low energy usage if temperature is equal or lower than 25 but higher than 18", function() {
 
-        expect(thermostat.currentEnergyUse()).toEqual('Medium energy use')
+        expect(thermostat.currentEnergyUse()).toEqual('medium-usage')
       });
 
       it("returns high energy usage if temperature is higher than 25", function() {
@@ -89,7 +89,7 @@ describe('Thermostat', function() {
         thermostat.up()
         thermostat.up()
 
-        expect(thermostat.currentEnergyUse()).toEqual('High energy use')
+        expect(thermostat.currentEnergyUse()).toEqual('high-usage')
       });
 
     });
