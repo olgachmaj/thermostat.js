@@ -1,6 +1,7 @@
 class Thermostat {
   constructor(){
-    this.temperature = 20;
+    this.temperature = 20
+    this.maxTemperature = 32
   }
 
   up() {
@@ -8,6 +9,10 @@ class Thermostat {
   }
 
   down() {
-    this.temperature -= 1;
+    return (this.temperature <= 10) ? "Minimum temperature is 10 degrees." : this.temperature -= 1;
+  }
+
+  savingModeSwitch() {
+    return this.maxTemperature === 32 ? this.maxTemperature = 25 : this.maxTemperature = 32
   }
 }

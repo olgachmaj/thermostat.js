@@ -8,13 +8,13 @@ describe('Thermostat', function() {
     thermostat = new Thermostat();
   });
 
-  it('starts at 20 degrees', function() {
+  it('Starts at 20 degrees', function() {
     expect(thermostat.temperature).toEqual(20);
   });
 
     describe("#up", function() {
 
-      it('temperature goes up 1 degree', function() {
+      it('Temperature goes up 1 degree', function() {
         thermostat.up()
         expect(thermostat.temperature).toEqual(21);
       });
@@ -22,9 +22,27 @@ describe('Thermostat', function() {
 
     describe("#down", function() {
 
-      it('temperature goes down 1 degree', function() {
+      it('Temperature goes down 1 degree', function() {
         thermostat.down()
         expect(thermostat.temperature).toEqual(19);
       });
+
+      it("Doesnt allow temperature to go below 10 degrres", function() {
+         var times = 10
+
+         for(let i = 0;i <= times;i++){
+           thermostat.down()
+         }
+        expect(thermostat.down()).toEqual('Minimum temperature is 10 degrees.');
+      });
     });
-});
+
+    describe("#savingModeSwitch", function() {
+
+      it("Changes max temperature to 25 degrees, switches saving mode to on from off", function() {
+        thermostat.savingModeSwitch()
+
+        expect(thermostat.maxTemperature).toEqual(25);
+      });
+    });
+  });
