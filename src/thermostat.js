@@ -29,4 +29,9 @@ class Thermostat {
       return 'High energy use'
     }
   }
+
+  reset() {
+    this.temperature = 20
+    return 'Thermostat temperature has been reset'
+  }
 }

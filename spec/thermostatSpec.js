@@ -94,4 +94,14 @@ describe('Thermostat', function() {
 
     });
 
+    describe('#reset', function() {
+
+      it("Resets temperature back to the default temperature", function() {
+        thermostat.up()
+
+        expect(thermostat.reset()).toEqual("Thermostat temperature has been reset")
+        expect(thermostat.temperature).toEqual(20)
+      });
+    });
+
   });
