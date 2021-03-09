@@ -39,10 +39,49 @@ describe('Thermostat', function() {
 
     describe("#savingModeSwitch", function() {
 
+      it("Changes max temperature to 32 degrees, switches saving mode to off from on", function() {
+         thermostat.savingModeSwitch()
+
+        expect(thermostat.maxTemperature).toEqual(32);
+        expect(thermostat.powerSavingMode).toEqual('off')
+      });
+
       it("Changes max temperature to 25 degrees, switches saving mode to on from off", function() {
         thermostat.savingModeSwitch()
+        thermostat.savingModeSwitch()
+
 
         expect(thermostat.maxTemperature).toEqual(25);
+        expect(thermostat.powerSavingMode).toEqual('on')
       });
     });
+
+    describe("#currentEnergyUse", function() {
+
+      it("returns low energy usage if temperature is lower than 18", function() {
+        thermostat.down()
+        thermostat.down()
+        thermostat.down()
+
+        expect(thermostat.currentEnergyUse()).toEqual('Low energy use')
+      });
+
+      it("returns low energy usage if temperature is equal or lower than 25 but higher than 18", function() {
+
+        expect(thermostat.currentEnergyUse()).toEqual('Medium energy use')
+      });
+
+      it("returns high energy usage if temperature is higher than 25", function() {
+        thermostat.up()
+        thermostat.up()
+        thermostat.up()
+        thermostat.up()
+        thermostat.up()
+        thermostat.up()
+
+        expect(thermostat.currentEnergyUse()).toEqual('High energy use')
+      });
+
+    });
+
   });
