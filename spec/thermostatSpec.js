@@ -18,6 +18,15 @@ describe('Thermostat', function() {
         thermostat.up()
         expect(thermostat.temperature).toEqual(21);
       });
+
+      it('Doesnt allow to go over maxTemperature', function() {
+        thermostat.up()
+        thermostat.up()
+        thermostat.up()
+        thermostat.up()
+        thermostat.up()
+        expect(thermostat.up()).toEqual(`Maximum temperature is ${thermostat.maxTemperature}`);
+      });
     });
 
     describe("#down", function() {
@@ -72,6 +81,7 @@ describe('Thermostat', function() {
       });
 
       it("returns high energy usage if temperature is higher than 25", function() {
+        thermostat.savingModeSwitch()
         thermostat.up()
         thermostat.up()
         thermostat.up()

@@ -6,7 +6,7 @@ class Thermostat {
   }
 
   up() {
-    this.temperature += 1;
+    return (this.temperature >= this.maxTemperature) ? `Maximum temperature is ${this.maxTemperature}` : this.temperature += 1
   }
 
   down() {
