@@ -32,7 +32,7 @@ body {
 }
 
 #temperature-up , #temperature-down , #temperature-reset , #select-city-submit {
-    padding: 20px;
+    padding: 25px;
     border-radius: 50%;
     background-color: white;
     -webkit-box-shadow: 1px 5px 15px 3px rgba(0,0,0,0.41);
@@ -40,17 +40,24 @@ body {
     0 10px 10px -5px rgba(0, 0, 0, 0.04);
     border: none;
     margin-left: 10px;
-    font-size: 24px;
+
     font-weight:bold;
     margin-top: 20px;
 }
 
 #temperature-up {
+  font-size: 36px;
   color:orange;
 }
 
 #temperature-down{
+  font-size:36px;
   color:lightblue;
+}
+
+#temperature-reset , #select-city-submit {
+
+  font-size: 16px;
 }
 
 form {
