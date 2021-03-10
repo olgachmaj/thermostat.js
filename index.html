@@ -5,25 +5,37 @@
     <link rel="stylesheet" href="stylesheet.css">
   </head>
   <body>
-    <section>
-      <form>
-        <input type="text" name="select-city" id="select-city">
-        <input type="submit" name="select-city-submit" id="select-city-submit">
-      </form>
 
-      <section>
-        <h1>Current temperature: <span id="current-temperature"></span></h1>
+    <form>
+      <input type="text" name="select-city" id="select-city" placeholder="Your City">
+      <input type="submit" name="select-city-submit" id="select-city-submit" value="Search">
+    </form>
+      <p>power saving mode is <span id="power-saving-status">on</span></p>
+    <section class="thermostat-wrapper">
 
-      </section>
 
-      <h1 id="thermostat-temperature"></h1>
+    <section class="thermostat-body">
+      <h1 id="thermostat-temperature" style="font-size:36px"></h1>
+
       <p>
         <button id="temperature-up">+</button>
         <button id="temperature-down">-</button>
-        <button id="temperature-reset">reset</button>
-        power saving mode is <span id="power-saving-status">on</span>
-        <button id="powersaving-switch"> PSM switch </button>
       </p>
+    </section>
+
+        <p>
+          <label class="switch">
+            <input type="checkbox" id="checkbox">
+            <span class="slider round"></span>
+         </label>
+         <button id="temperature-reset">reset</button>
+        </p>
+
+      <section>
+        <span id="current-city"></span> <span id="current-temperature"></span> 
+
+      </section>
+
     </section>
       <script src="src/env.js"></script>
     <script src="src/jquery-3.6.0.min.js"></script>
