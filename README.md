@@ -10,20 +10,17 @@
 <p align="center"> <b>Frontend JS based lightweight thermostat app.</b> </p>
 
 <p align="center">
-  <img  src="https://img.shields.io/badge/coverage-100%25-brightgreen">
-  <img  src="https://img.shields.io/github/languages/code-size/olgachmaj/thermostat.js?color=brightgreen">
-  <img  src="https://img.shields.io/github/languages/top/olgachmaj/thermostat.js"> 
-  <img  src="https://img.shields.io/tokei/lines/github/olgachmaj/thermostat.js?color=bright">                       
-      
+  <img  src="https://img.shields.io/badge/coverage-100%25-brightgreen"/>
+  <img  src="https://img.shields.io/github/languages/code-size/olgachmaj/thermostat.js?color=brightgreen"/>
+  <img  src="https://img.shields.io/github/languages/top/olgachmaj/thermostat.js"/> 
+  <img  src="https://img.shields.io/tokei/lines/github/olgachmaj/thermostat.js?color=bright"/>                       
 </p>
 
 <p align="center">
-
   <a href="#key-features">Key Features</a> •
   <a href="#how-to-use">How To Use</a> •
-  <a href="#download">Download</a> •
+  <a href="#future-features">Download</a> •
   <a href="#credits">Credits</a> •
-  <a href="#related">Related</a> •
   <a href="#license">License</a>
 </p>
 
@@ -34,7 +31,7 @@
             
 
 
-## Getting started 
+# How to use
 
 Clone the repository  
 
@@ -42,7 +39,7 @@ Clone the repository
 
 Then, simply open index.html in your browser to use the app.
 
-## Complete features
+# Key features
 
 
 
@@ -61,7 +58,7 @@ Then, simply open index.html in your browser to use the app.
 
 --- 
 
-## Feature features
+## Future features
 
 * Settings panel allowing the user to set their own default temperature of choice, as well as maximum temperature when power saving mode is activated.  
 
@@ -76,3 +73,8 @@ Then, simply open index.html in your browser to use the app.
 
 
 ---
+# Credits
+
+# License
+
+MIT.
