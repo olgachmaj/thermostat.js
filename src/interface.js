@@ -13,7 +13,7 @@ $(document).ready(function() {
     var city = $('#select-city').val();
     $.get('http://api.openweathermap.org/data/2.5/weather?q=' + city + '&appid='+ API_KEY + '&units=metric', function(data) {
      console.log(data);
-    $('#current-temperature').text(data.main.temp + '°');
+    $('#current-temperature').text(data.main.temp + '°')
     $('#current-city').text(data.name);
   })
 })
