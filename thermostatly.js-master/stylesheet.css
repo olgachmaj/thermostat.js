@@ -1,0 +1,165 @@
+
+
+
+
+body {
+  margin:auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: snow;
+}
+
+.thermostat-wrapper{
+  margin:auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 110px;
+}
+
+.thermostat-body {
+  background-color: white;
+  padding-top: 100px;
+  padding-bottom: 40px;
+  padding-left: 100px;
+  padding-right: 100px;
+  border-radius: 50%; /* the magic */
+ -moz-border-radius: 50%;
+ -webkit-border-radius: 50%;
+ -webkit-box-shadow: 1px 5px 15px 3px rgba(0,0,0,0.41);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+   0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+#temperature-up , #temperature-down , #temperature-reset , #select-city-submit{
+    padding: 25px;
+    border-radius: 50%;
+    background-color: white;
+    -webkit-box-shadow: 1px 5px 15px 3px rgba(0,0,0,0.41);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    border: none;
+    margin-left: 10px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+#temperature-up {
+  font-size: 36px;
+  color:orange;
+}
+
+#temperature-down{
+  font-size:36px;
+  color:lightblue;
+}
+
+#temperature-reset , #select-city-submit {
+
+  font-size: 16px;
+}
+
+#current-city, #current-temperature {
+  padding: 40px;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.weather-wrapper {
+  margin-top: 40px;
+  color: grey;
+}
+
+form {
+  align-self: start;
+  margin: 20px;
+}
+
+.low-usage {
+  color: green;
+}
+
+.medium-usage {
+  color: black;
+}
+
+.high-usage {
+  color: orange;
+}
+
+/* power saving switch */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: lightgrey;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: $blue;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 0 4px rgba(21, 156, 228, 0.7);
+  outline: none;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+
+input[type=text]{
+    width:100%;
+    border:2px solid #lightgrey;
+    border-radius:4px;
+    margin:8px 0;
+    outline:none;
+    padding:8px;
+    box-sizing:border-box;
+    transition:.3s;
+  }
+
+  input[type=text]:focus{
+    border-color:pink;
+    box-shadow:0 0 8px 0 orange;
+  }
