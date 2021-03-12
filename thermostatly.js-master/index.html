@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Thermostat</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <meta charset="utf-8" />
+  </head>
+  <body>
+
+    <form>
+      <input type="text" name="select-city" id="select-city" placeholder="Your City">
+      <input type="submit" name="select-city-submit" id="select-city-submit" value="Search">
+    </form>
+      <p style="color: grey" >power saving mode is <span id="power-saving-status">on</span></p>
+    <section class="thermostat-wrapper">
+
+
+    <section class="thermostat-body">
+      <h1 id="thermostat-temperature" style="font-size:36px"></h1>
+
+      <p>
+        <button id="temperature-up">+</button>
+        <button id="temperature-down">-</button>
+      </p>
+    </section>
+
+        <p>
+          <label class="switch">
+            <input type="checkbox" id="checkbox">
+            <span class="slider round"></span>
+         </label>
+         <button id="temperature-reset">reset</button>
+        </p>
+
+      <section class="weather-wrapper">
+        <span id="current-city"></span> <span id="current-temperature"></span>
+
+      </section>
+
+    </section>
+      <script src="src/env.js"></script>
+    <script src="src/jquery-3.6.0.min.js"></script>
+    <script src="src/thermostat.js"></script>
+    <script src="src/interface.js"></script>
+
+  </body>
+</html>
