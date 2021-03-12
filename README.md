@@ -25,7 +25,7 @@
 </p>
 
 <p align="center">
-  <img  src="https://github.com/olgachmaj/thermostat.js/blob/master/images/screenshot.png">  
+  <img  src="https://github.com/olgachmaj/thermostatly.js/blob/master/thermostat.gif">  
 </p>
 
             
